@@ -1,0 +1,14 @@
+name: CI
+
+on:
+  push:
+    
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: download sber sdk archive
+        run: |
+          curl https://developer.sberbank.ru/doc/files/sberbankid_sdk_android_v~1~1~2~zip --output sber_id_sdk.zip
