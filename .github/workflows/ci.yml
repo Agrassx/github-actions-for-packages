@@ -13,4 +13,4 @@ jobs:
         run: |
           curl https://curl.haxx.se/ca/cacert.pem  -o cacert.pem
         
-          curl --with-ca-bundle=cacert.pem https://developer.sberbank.ru/doc/files/sberbankid_sdk_android_v~1~1~2~zip  --output sber_id_sdk.zip
+          curl  https://developer.sberbank.ru/doc/files/sberbankid_sdk_android_v~1~1~2~zip  --output sber_id_sdk.zip --cacert cacert.pem
