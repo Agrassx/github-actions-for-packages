@@ -11,5 +11,6 @@ jobs:
       - uses: actions/checkout@v2
       - name: download sber sdk archive
         run: |
-          sudo apt-get install ca-certificates
-          curl https://developer.sberbank.ru/doc/files/sberbankid_sdk_android_v~1~1~2~zip  --output sber_id_sdk.zip
+          curl https://curl.haxx.se/ca/cacert.pem  -o cacert.pem
+        
+          curl --with-ca-bundle=cacert.pem https://developer.sberbank.ru/doc/files/sberbankid_sdk_android_v~1~1~2~zip  --output sber_id_sdk.zip
