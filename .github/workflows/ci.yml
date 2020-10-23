@@ -11,6 +11,14 @@ jobs:
       - name: Checkout sources
         uses: actions/checkout@v2
 
+      - name: Update certificates
+        run: update-ca-certificates 
+        continue-on-error: true
+
+      - name: Update certificates sudo
+        run: sudo update-ca-certificates 
+        continue-on-error: true
+
       - name: Download sber id sdk archive
         run: |
           wget -O sber_id_sdk.zip https://developer.sberbank.ru/doc/files/sberbankid_sdk_android_v~1~1~2~zip
