@@ -5,12 +5,12 @@ on:
     
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
 
     steps:
-      - uses: actions/checkout@v2
-      - name: download sber sdk archive
+      - name: Checkout sources
+        uses: actions/checkout@v2
+
+      - name: Download sber id sdk archive
         run: |
-          curl https://curl.haxx.se/ca/cacert.pem  -o cacert.pem
-        
-          curl  https://developer.sberbank.ru/doc/files/sberbankid_sdk_android_v~1~1~2~zip  --output sber_id_sdk.zip --cacert cacert.pem
+          curl  https://developer.sberbank.ru/doc/files/sberbankid_sdk_android_v~1~1~2~zip  --output sber_id_sdk.zip
