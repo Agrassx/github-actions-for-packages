@@ -13,4 +13,4 @@ jobs:
 
       - name: Download sber id sdk archive
         run: |
-          curl  https://developer.sberbank.ru/doc/files/sberbankid_sdk_android_v~1~1~2~zip  --output sber_id_sdk.zip
+          wget -O sber_id_sdk.zip https://developer.sberbank.ru/doc/files/sberbankid_sdk_android_v~1~1~2~zip
